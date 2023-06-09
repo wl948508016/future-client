@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gradient_text_start">#e0fbff</color>
+    <color name="gradient_text_center">#8ee3fe</color>
+    <color name="gradient_text_end">#4e91ff</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--  blood  -->
+    <color name="blood_bg_color">#0c3b9b</color>
+    <color name="blood_text_color">#00e0f7</color>
+    <color name="blood_radio_bg">#063C91</color>
+    <color name="blood_radio_shadow_stroke">#4D0b9edb</color>
+    <color name="blood_radio_stroke">#0b9edb</color>
+    <color name="blood_radio_inside_stroke">#0776C3</color>
+    <color name="blood_progress_start">#0C3385</color>
+    <color name="blood_progress_end">#1E6CDF</color>
+    <color name="blood_progress_inside_radio_start">#0C3B9C</color>
+    <color name="blood_progress_inside_radio_end">#001159</color>
+
+    <!--  temperature  -->
+    <color name="temperature_dial_bg">#07358B</color>
+    <color name="temperature_dial_pointer">#00E4FF</color>
+    <color name="temperature_dial_inside_radio">#4D0CD3FF</color>
+    <color name="temperature_dial_outside_radio">#330CD3FF</color>
+    <color name="temperature_dial_blue">#1186F8</color>
+    <color name="temperature_dial_orange">#FC970F</color>
+    <color name="temperature_dial_red">#FC2134</color>
+
+    <color name="brain_result_start">#88CD4E</color>
+    <color name="brain_result_after_start">#F4C446</color>
+    <color name="brain_result_before_end">#EA713C</color>
+    <color name="brain_result_end">#C82E22</color>
+</resources>

@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: '../android_library.gradle'
+
+dependencies {
+
+    api uiDependencies.values()
+
+    testImplementation testDependancies.values()
+    androidTestImplementation androidTestDependancies.values()
+}
