@@ -12,9 +12,9 @@ interface LView {
     /**
      * 显示加载
      */
-     fun showLoading(){
-         // noting
-     }
+    fun showLoading(message:String =""){
+        // noting
+    }
 
     /**
      * 隐藏加载

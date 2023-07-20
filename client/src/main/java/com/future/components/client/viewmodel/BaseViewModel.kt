@@ -11,10 +11,20 @@ import androidx.lifecycle.ViewModel
  */
 open class BaseViewModel:ViewModel() {
 
-    var messageLive=MutableLiveData<Any>()
+    var messageLive=MutableLiveData<Any?>()
+
+    var loadingLive = MutableLiveData<Any?>()
 
     fun postMessage(message:Any?){
         messageLive.postValue(message)
+    }
+
+    fun postLoading(message:Any?) {
+        loadingLive.postValue(message)
+    }
+
+    fun postLoadingCancel() {
+        loadingLive.postValue(null)
     }
 
     override fun onCleared() {

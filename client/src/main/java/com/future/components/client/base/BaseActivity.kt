@@ -57,7 +57,16 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
             if(it is Int||it is String){
                 showMessage(if(it is String) it else resources.getString(it as Int))
             }
+        }
 
+        viewModel.loadingLive.observe(this) {
+            if (it == null) {
+                hideLoading()
+                return@observe
+            }
+            if(it is Int||it is String){
+                showLoading(if(it is String) it else resources.getString(it as Int))
+            }
         }
     }
 }
