@@ -12,7 +12,7 @@ android{
 }
 
 dependencies {
-
+    api environments.values()
     api ktxDependancies.values()
     api gsonDependancies.values()
     api project(path: ':ui-components')
