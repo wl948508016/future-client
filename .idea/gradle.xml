@@ -6,7 +6,11 @@
       <GradleProjectSettings>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="gradleJvm" value="11" />
+=======
+        <option name="gradleJvm" value="#JAVA_HOME" />
+>>>>>>> 2fe42755f27afb2ad1c6c4f60e1ebbb48b1ff4b8
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

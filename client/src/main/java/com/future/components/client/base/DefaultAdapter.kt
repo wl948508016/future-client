@@ -1,5 +1,6 @@
 package com.future.components.client.base
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +14,7 @@ import com.future.components.client.base.BaseHolder.OnViewClickListener
  * @Author:         future
  * @CreateDate:      2020/1/7 9:59
  */
-abstract class DefaultAdapter<T> (var infoList: MutableList<T>) : RecyclerView.Adapter<BaseHolder<T>>() {
+abstract class DefaultAdapter<T> (var infoList: MutableList<T> = mutableListOf()) : RecyclerView.Adapter<BaseHolder<T>>() {
     private var mOnItemClickListener: OnRecyclerViewItemClickListener<T>? = null
 
     /**
@@ -113,21 +114,18 @@ abstract class DefaultAdapter<T> (var infoList: MutableList<T>) : RecyclerView.A
         mOnItemClickListener = listener
     }
 
-    companion object {
-        /**
-         * 遍历所有 [BaseHolder], 释放他们需要释放的资源
-         *
-         * @param recyclerView [RecyclerView]
-         */
-        fun releaseAllHolder(recyclerView: RecyclerView?) {
-            if (recyclerView == null) return
-            for (i in recyclerView.childCount - 1 downTo 0) {
-                val view = recyclerView.getChildAt(i)
-                val viewHolder = recyclerView.getChildViewHolder(view)
-                if (viewHolder is BaseHolder<*>) {
-                    viewHolder.onRelease()
-                }
-            }
-        }
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(info:List<T>){
+        this.infoList.clear()
+        this.infoList.addAll(info)
+        notifyDataSetChanged()
     }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(info:List<T>, pageNum:Int){
+        if(pageNum==1) this.infoList.clear()
+        this.infoList.addAll(info)
+        notifyDataSetChanged()
+    }
+
 }
